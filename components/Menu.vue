@@ -48,6 +48,8 @@ onClickOutside(menuMobileTemplate, () => mobIsActive.value = false)
     <div class="flex flex-center">
       <button class="menu-mobile__close-button" @click="mobIsActive = false">Закрыть</button>
     </div>
-    <div v-for="item in items">{{ item.label }}</div>
+    <ul class="menu-mobile__items">
+      <li v-for="item in items"><a :href="item.link">{{ item.label }}</a></li>
+    </ul>
   </div>
 </template>

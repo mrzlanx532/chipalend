@@ -41,7 +41,6 @@
 
   &__items {
     padding-right: 40px;
-    list-style: none;
     margin: 0;
     vertical-align: middle;
     text-align: right;
@@ -88,6 +87,16 @@
 
   &__close-button {
     padding: 10px;
+  }
+
+  &__items {
+    li {
+      padding: 10px 0 10px 0;
+
+      a {
+        color: white;
+      }
+    }
   }
 }
 

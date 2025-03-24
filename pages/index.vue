@@ -5,7 +5,6 @@ import Hero from '@/components/sections/Hero.vue'
 <template>
   <div id="page">
     <Hero />
-
     <div style="height: 100px; width: 100%;">Hello</div>
   </div>
 </template>
