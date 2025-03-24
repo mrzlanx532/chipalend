@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { onClickOutside } from '@vueuse/core'
+
+const mobIsActive = ref(false)
+const menuMobileTemplate = useTemplateRef<HTMLDivElement>('menuMobileTemplate')
+
 const items = [
   {
     label: 'Главная',
@@ -21,6 +26,8 @@ const items = [
     link: '#',
   },
 ]
+
+onClickOutside(menuMobileTemplate, () => mobIsActive.value = false)
 </script>
 
 <template>
@@ -31,9 +38,16 @@ const items = [
         <a :href="item.link">{{ item.label }}</a>
       </li>
     </ul>
-    <div>
-      <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
-      <label class="burger" for="burger-checkbox" />
+    <div class="burger-container" @click="mobIsActive = !mobIsActive">
+      <svg height="50" width="50">
+        <use xlink:href="/sprite.svg#burger" />
+      </svg>
     </div>
+  </div>
+  <div class="menu-mobile" :class="{'active': mobIsActive}" ref="menuMobileTemplate">
+    <div class="flex flex-center">
+      <button class="menu-mobile__close-button" @click="mobIsActive = false">Закрыть</button>
+    </div>
+    <div v-for="item in items">{{ item.label }}</div>
   </div>
 </template>

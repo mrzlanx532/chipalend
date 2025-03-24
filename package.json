@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@mrzlanx532/nuxt-3-custom-scroll-plugin": "^0.0.26",
+    "@vueuse/core": "^13.0.0",
     "nuxt": "^3.16.1",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"

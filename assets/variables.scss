@@ -6,5 +6,11 @@
   --document-scroll-track-border-radius: 0;
   --document-scroll-thickness-hover-active: 8px;
 
-  --document-scroll-background: -webkit-linear-gradient(90deg,#b19f9f,#df746b,#f3411f);
+  --document-scroll-background: transparent;
+}
+
+@media (min-width: 840px) {
+  :root {
+    --document-scroll-background: -webkit-linear-gradient(90deg,#b19f9f,#df746b,#f3411f);
+  }
 }

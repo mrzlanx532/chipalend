@@ -22,11 +22,9 @@ onMounted(() => {
 <template>
   <div class="hero" ref="heroTemplateRef"/>
   <div class="hero__cover" ref="heroCoverTemplateRef"/>
-
   <Menu />
-
   <div class="container">
-    <div>
+    <div style="padding: 2em;">
       <h1>Организация детских праздников от профессиональных аниматоров в Москве</h1>
       <h2>Поможем Вам с выбором программы под любой возраст и бюджет!</h2>
       <div class="flex flex-center">
