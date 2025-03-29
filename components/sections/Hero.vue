@@ -5,7 +5,7 @@ const heroTemplateRef = ref(null)
 const heroCoverTemplateRef = ref(null)
 const calculatedHeight = ref<number>(0)
 
-const recalculateHeight = () => {
+const setHeight = () => {
   calculatedHeight.value = window.innerHeight
 
   heroCoverTemplateRef.value.style.height = `${calculatedHeight.value}px`
@@ -13,8 +13,7 @@ const recalculateHeight = () => {
 }
 
 onMounted(() => {
-  window.addEventListener('load', recalculateHeight)
-  //window.addEventListener('resize', recalculateHeight)
+  setHeight()
 })
 </script>
 
