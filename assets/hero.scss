@@ -24,15 +24,17 @@
 }
 
 .menu {
-  display: table;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 70px;
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
+  padding: 0 20px;
 
   &__company-name {
-    padding-left: 40px;
     display: table-cell;
     vertical-align: middle;
     font-size: 24px;
@@ -40,7 +42,6 @@
   }
 
   &__items {
-    padding-right: 40px;
     margin: 0;
     vertical-align: middle;
     text-align: right;
@@ -180,5 +181,4 @@ h2 {
 .burger-container {
   position: relative;
   width: 50px;
-  padding: 20px;
 }
