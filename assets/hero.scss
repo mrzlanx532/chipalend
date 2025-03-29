@@ -1,13 +1,13 @@
 .hero {
   background: url("/img/hero.jpg") center / cover no-repeat fixed;
-  height: calc(100vh - 1px);
+  height: 100vh;
   filter: blur(2px);
   z-index: 1;
   position: relative;
 
   &__cover {
     position: absolute;
-    height: calc(100vh - 1px);
+    height: 100vh;
     z-index: 2;
     width: 100%;
     top: 0;
