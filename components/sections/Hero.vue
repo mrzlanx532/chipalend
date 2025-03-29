@@ -14,7 +14,7 @@ const recalculateHeight = () => {
 
 onMounted(() => {
   window.addEventListener('load', recalculateHeight)
-  window.addEventListener('resize', recalculateHeight)
+  //window.addEventListener('resize', recalculateHeight)
 })
 </script>
 
