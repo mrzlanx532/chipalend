@@ -6,7 +6,7 @@ const heroCoverTemplateRef = ref(null)
 const calculatedHeight = ref<number>(0)
 
 const setHeight = () => {
-  calculatedHeight.value = documentElement.clientHeight
+  calculatedHeight.value = document.documentElement.clientHeight
 
   heroCoverTemplateRef.value.style.height = `${calculatedHeight.value}px`
   heroTemplateRef.value.style.height = `${calculatedHeight.value}px`
