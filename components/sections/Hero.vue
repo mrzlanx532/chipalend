@@ -3,19 +3,13 @@ import Menu from '@/components/Menu.vue'
 
 const heroTemplateRef = ref(null)
 const heroCoverTemplateRef = ref(null)
-const calculatedHeight = ref<string>('0')
-
-const recalculateHeight = () => {
-  const rect = heroTemplateRef.value.getBoundingClientRect()
-
-  calculatedHeight.value = rect.height
-
-  heroCoverTemplateRef.value.style.height = `${calculatedHeight.value}px`
-}
+const calculatedHeight = ref<number>(0)
 
 onMounted(() => {
-  new ResizeObserver(recalculateHeight).observe(document.body)
-  recalculateHeight()
+  calculatedHeight.value = window.innerHeight
+
+  heroCoverTemplateRef.value.style.height = `${calculatedHeight.value}px`
+  heroTemplateRef.value.style.height = `${calculatedHeight.value}px`
 })
 </script>
 
