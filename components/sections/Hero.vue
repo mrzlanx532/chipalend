@@ -13,7 +13,7 @@ const setHeight = () => {
 }
 
 onMounted(() => {
-  setHeight()
+  //setHeight()
 })
 </script>
 

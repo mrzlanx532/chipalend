@@ -1,9 +1,5 @@
 .hero {
-  background-image: url("/img/hero.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  background: url("/img/hero.jpg") center / cover no-repeat fixed;
   height: 100vh;
   filter: blur(2px);
   z-index: 1;
