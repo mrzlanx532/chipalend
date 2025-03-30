@@ -1,0 +1,86 @@
+.tariffs {
+  height: 100vh;
+  width: 100%;
+
+  h2 {
+    font-size: 54px;
+    color: black;
+    text-align: center;
+  }
+
+  &__container {
+    display: grid;
+    width: 700px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+
+  @media (min-width: 360px) {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__tariff {
+    padding: 30px 15px;
+    background: white;
+    border-radius: 20px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    height: fit-content;
+    max-width: 380px;
+  }
+
+  &__tariff-name {
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Balsamiq Sans';
+  }
+
+  &__tariff-price {
+    text-align: center;
+    color: dimgrey;
+    font-size: 32px;
+    font-family: 'Balsamiq Sans';
+  }
+
+  &__tariff-old-price {
+    text-align: center;
+    text-decoration-line: line-through;
+    color: dimgrey;
+    font-family: 'Balsamiq Sans';
+  }
+
+  &__tariff-points {
+    padding-left: 2em;
+    font-family: 'Balsamiq Sans';
+
+    li {
+      padding-left: 1em;
+      position: relative;
+    }
+
+    li:before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border: 2px solid #B4BEC8;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0.35em;
+    }
+  }
+
+  &__tariff-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+}

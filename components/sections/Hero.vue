@@ -21,12 +21,12 @@ onMounted(() => {
   <div class="hero" ref="heroTemplateRef"/>
   <div class="hero__cover" ref="heroCoverTemplateRef"/>
   <Menu />
-  <div class="container">
+  <div class="hero__container container">
     <div style="padding: 2em;">
-      <h1>Организация детских праздников от профессиональных аниматоров в Москве</h1>
-      <h2>Поможем Вам с выбором программы под любой возраст и бюджет!</h2>
+      <h1 class="hero__header" v-gsap.fromInvisible.from='{ delay: 0.1, y: 10 }'>Организация детских праздников от профессиональных аниматоров в Москве</h1>
+      <h2 class="hero__subheader" v-gsap.fromInvisible.from='{ delay: 0.1, y: 10 }'>Поможем Вам с выбором программы под любой возраст и бюджет!</h2>
       <div class="flex flex-center">
-        <button class="hero__button">Связаться</button>
+        <button class="hero__button" v-gsap.fromInvisible.from='{ delay: 1, y: 10 }'>Связаться</button>
       </div>
     </div>
   </div>
