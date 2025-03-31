@@ -1,0 +1,19 @@
+.footer {
+  background: #e3e3e3;
+  color: dimgrey;
+
+  & > * {
+    font-family: 'Geologica';
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 50px 0;
+
+    &:last-child {
+      //padding-top: 0;
+    }
+  }
+}

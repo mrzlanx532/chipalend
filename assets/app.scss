@@ -2,6 +2,8 @@
 @use 'common';
 @use 'hero';
 @use 'tariffs';
+@use 'footer';
+@use 'open-form';
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -10,8 +12,13 @@
   // font-family: 'Geologica'; // Более серьезный
 }
 
+p {
+  margin: 0;
+}
+
 h2 {
   font-family: 'Geologica';
+  margin: 0;
 }
 
 body {

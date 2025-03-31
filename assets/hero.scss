@@ -66,6 +66,7 @@
     vertical-align: middle;
     text-align: right;
     font-size: 16px;
+    padding: 20px;
     font-family: 'Geologica';
 
     li {
@@ -82,6 +83,12 @@
       &:last-of-type {
         margin-right: 0;
       }
+    }
+
+    &.white {
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
     }
   }
 }
