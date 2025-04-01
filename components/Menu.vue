@@ -45,26 +45,19 @@ onMounted(() => {
       //return
     }
 
-    if (entries[0].isIntersecting) {
-      menuItems1Template.value?.classList.remove('white')
-
-      menuCompanyNameTemplate.value.style.color = 'white'
-
-      menuItemsTemplate.value.forEach(item => {
-
-        console.log(item)
-
-        item.style.color = 'white'
-      })
-    } else {
+   /* if (entries[0].isIntersecting) {
       menuItems1Template.value?.classList.add('white')
       menuCompanyNameTemplate.value.style.color = 'black'
       menuItemsTemplate.value.forEach(item => {
-        console.log(item)
         item.style.color = 'black'
       })
-      console.log(menuItemsTemplate.value)
-    }
+    } else {
+      menuItems1Template.value?.classList.remove('white')
+      menuCompanyNameTemplate.value.style.color = 'white'
+      menuItemsTemplate.value.forEach(item => {
+        item.style.color = 'white'
+      })
+    }*/
   })
 
   observer.observe(element, {
@@ -78,7 +71,7 @@ onMounted(() => {
 <template>
   <div class="menu" ref="menuTemplate">
     <div class="menu__company-name" ref="menuCompanyNameTemplate">TOP1ANIMATOR</div>
-    <ul class="menu__items" ref="menuItems1Template">
+    <ul class="menu__items" ref="menuItems1Template" v-gsap.fromInvisible.from='{ delay: 0.1, y: -10 }'>
       <li v-for="item in items">
         <a :href="item.link" ref="menuItemsTemplate">{{ item.label }}</a>
       </li>

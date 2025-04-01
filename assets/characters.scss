@@ -1,0 +1,11 @@
+.characters {
+  height: 400px;
+  background: pink;
+  padding: 80px 0;
+
+  &__header {
+    font-family: 'Geologica';
+    font-size: 54px;
+    text-align: left;
+  }
+}

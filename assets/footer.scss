@@ -16,4 +16,19 @@
       //padding-top: 0;
     }
   }
+
+  @media (min-width: 360px) {
+    &__info {
+      flex-direction: column;
+      align-items: flex-start;
+      grid-gap: 20px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &__info {
+      flex-direction: row;
+      align-items: space-between;
+    }
+  }
 }

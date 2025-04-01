@@ -16,9 +16,16 @@
   }
 
   &__header {
-    font-size: 54px;
     font-family: 'Geologica';
     margin-bottom: 20px;
+
+    @media (min-width: 360px) {
+      font-size: 24px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 54px;
+    }
   }
 
   &__subheader {
@@ -47,5 +54,6 @@
     display: flex;
     grid-gap: 10px;
     justify-content: center;
+    flex-wrap: wrap;
   }
 }

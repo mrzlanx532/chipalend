@@ -60,7 +60,7 @@ const tariffs = ref([
   <div class="tariffs">
     <h2 v-gsap.whenVisible.once.from='{ autoAlpha: 0, start: "top 80%", end: "bottom 10%"}'>Тарифы праздника</h2>
     <div class="tariffs__container container">
-      <div class="tariffs__tariff" v-for="tariff in tariffs">
+      <div class="tariffs__tariff" v-for="tariff in tariffs" v-gsap.whenVisible.once.from='{ autoAlpha: 0, start: "top 80%", end: "bottom 10%"}'>
         <div class="tariffs__tariff-name">
           {{ tariff.name }}
         </div>

@@ -2,8 +2,9 @@
 @use 'common';
 @use 'hero';
 @use 'tariffs';
-@use 'footer';
 @use 'open-form';
+@use 'characters';
+@use 'footer';
 
 *, *:before, *:after {
   box-sizing: border-box;
