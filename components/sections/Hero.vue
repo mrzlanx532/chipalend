@@ -16,6 +16,11 @@ const setHeight = () => {
 
 onMounted(() => {
   setHeight()
+
+  useGSAP().to('.hero__subheader', {
+    text: 'Поможем Вам с выбором программы под любой возраст и бюджет!',
+    duration: 2
+  })
 })
 </script>
 
@@ -32,7 +37,7 @@ onMounted(() => {
   <div class="hero__container container">
     <div style="padding: 2em;">
       <h1 class="hero__header" v-gsap.fromInvisible.from='{ delay: 0.1, y: 10 }'>Организация детских праздников от профессиональных аниматоров в Москве</h1>
-      <h2 class="hero__subheader" v-gsap.fromInvisible.from='{ delay: 0.1, y: 10 }' v-gsap.fromInvisible.animateText>Поможем Вам с выбором программы под любой возраст и бюджет!</h2>
+      <h2 class="hero__subheader" v-gsap.fromInvisible.from='{ delay: 0.1, y: 10 }'></h2>
       <div class="flex flex-center">
         <button class="button" v-gsap.fromInvisible.from='{ delay: 1, y: 10 }'>Связаться</button>
       </div>
