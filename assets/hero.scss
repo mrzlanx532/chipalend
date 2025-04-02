@@ -184,7 +184,7 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-end;
   }
 
   &__phone-container {
@@ -203,11 +203,12 @@
     justify-content: center;
     margin-top: 20px;
     flex-direction: column;
+    margin-bottom: 40px;
   }
 
   &__messenger {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     align-items: center;
   }

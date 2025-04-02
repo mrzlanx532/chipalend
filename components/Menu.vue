@@ -109,21 +109,21 @@ onMounted(() => {
       </ul>
     </div>
     <div>
-      <div class="menu-mobile__messengers">
-        <div class="menu-mobile__messenger">
-          <div class="menu-mobile__messenger-label">Написать в Whatsapp</div>
-          <svg height="40" width="40" @click="mobIsActive = !mobIsActive">
-            <use xlink:href="/sprite.svg#whatsapp" />
-          </svg>
-        </div>
-        <div class="menu-mobile__messenger">
-          <div class="menu-mobile__messenger-label">Написать в Telegram</div>
-          <svg height="40" width="40" @click="mobIsActive = !mobIsActive">
-            <use xlink:href="/sprite.svg#telegram" />
-          </svg>
-        </div>
-      </div>
       <div class="menu-mobile__phone-container">
+        <div class="menu-mobile__messengers">
+          <div class="menu-mobile__messenger">
+            <div class="menu-mobile__messenger-label">Написать в Whatsapp</div>
+            <svg height="40" width="40" @click="mobIsActive = !mobIsActive">
+              <use xlink:href="/sprite.svg#whatsapp" />
+            </svg>
+          </div>
+          <div class="menu-mobile__messenger">
+            <div class="menu-mobile__messenger-label">Написать в Telegram</div>
+            <svg height="40" width="40" @click="mobIsActive = !mobIsActive">
+              <use xlink:href="/sprite.svg#telegram" />
+            </svg>
+          </div>
+        </div>
         <div>Бесплатная консультация</div>
         <a href="tel:+79999999999">+7 (999) 999-99-99</a>
       </div>
