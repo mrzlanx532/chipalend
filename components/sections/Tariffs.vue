@@ -80,7 +80,7 @@ const onPointerOut = (e: PointerEvent, index: number) => {
           class="tariffs__tariff"
           v-for="(tariff, index) in tariffs"
           ref="tariffTemplateRef"
-          v-gsap.whenVisible.once.from='{ autoAlpha: 0, start: "top 80%", end: "bottom 10%"}'
+          v-gsap.desktop.whenVisible.once.from='{ autoAlpha: 0, start: "top 80%", end: "bottom 10%"}'
       >
         <div class="tariffs__tariff-name">
           {{ tariff.name }}
