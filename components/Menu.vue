@@ -49,7 +49,7 @@ const closeMenu = () => {
 
 const onClickWhatsapp = () => {
   const a = document.createElement('a')
-  a.href = 'whatsapp://send?abid=+79031559009'
+  a.href = 'whatsapp://send?phone=79031559009'
   a.click()
 }
 

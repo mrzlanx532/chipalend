@@ -211,6 +211,10 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
+
+    svg {
+      pointer-events: none;
+    }
   }
 
   &__messenger-label {
