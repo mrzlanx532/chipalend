@@ -13,7 +13,7 @@
       <div class="open-form__form-container">
         <input class="open-form__input" placeholder="Имя">
         <input class="open-form__input" placeholder="Номер">
-        <button class="button">Получить консультацию</button>
+        <button class="button --not-white">Получить консультацию</button>
       </div>
     </div>
   </div>

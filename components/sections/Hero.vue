@@ -39,7 +39,7 @@ onMounted(() => {
       <h1 class="hero__header" v-gsap.fromInvisible.from='{ delay: 0.1, y: 10 }'>Организация детских праздников от профессиональных аниматоров в Москве</h1>
       <h2 class="hero__subheader" v-gsap.fromInvisible.from='{ delay: 0.1, y: 10 }'></h2>
       <div class="flex flex-center">
-        <button class="button" v-gsap.fromInvisible.from='{ delay: 2, y: 10 }'>Связаться</button>
+        <button class="button --not-white" v-gsap.fromInvisible.from='{ delay: 1.5, y: 10 }'>Связаться</button>
       </div>
     </div>
   </div>

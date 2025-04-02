@@ -1,5 +1,5 @@
 .footer {
-  background: #e3e3e3;
+  background: #ffffff;
   color: dimgrey;
 
   & > * {
@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: flex-end;
     padding: 50px 0;
+    color: #b4bec8;
 
     &:last-child {
       //padding-top: 0;

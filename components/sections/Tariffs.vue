@@ -97,7 +97,7 @@ const onPointerOut = (e: PointerEvent, index: number) => {
           </li>
         </ul>
         <div class="tariffs__tariff-button-container">
-          <button class="button">Заказать</button>
+          <button class="button --white">Заказать</button>
         </div>
       </div>
     </div>
