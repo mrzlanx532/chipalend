@@ -97,21 +97,36 @@ onMounted(() => {
     </div>
   </div>
   <div class="menu-mobile" :class="{'active': mobIsActive}" ref="menuMobileTemplate">
-    <div class="menu-mobile__header-container">
-      <div class="menu-mobile__company-name" ref="menuCompanyNameTemplate">TOP1ANIMATOR</div>
-      <svg height="28" width="28" @click="closeMenu">
-        <use xlink:href="/sprite.svg#close" />
-      </svg>
+    <div>
+      <div class="menu-mobile__header-container">
+        <div class="menu-mobile__company-name" ref="menuCompanyNameTemplate">TOP1ANIMATOR</div>
+        <svg height="28" width="28" @click="closeMenu">
+          <use xlink:href="/sprite.svg#close" />
+        </svg>
+      </div>
+      <ul class="menu-mobile__items">
+        <li v-for="item in items" ><a :href="item.link">{{ item.label }}</a></li>
+      </ul>
     </div>
-    <ul class="menu-mobile__items">
-      <li v-for="item in items" ><a :href="item.link">{{ item.label }}</a></li>
-    </ul>
-    <hr />
-    <div style="margin-top: 20px;">
-      <a href="tel:+79999999999">+7(999)999-99-99</a>
+    <div>
+      <div class="menu-mobile__messengers">
+        <div class="menu-mobile__messenger">
+          <div class="menu-mobile__messenger-label">Написать в Whatsapp</div>
+          <svg height="40" width="40" @click="mobIsActive = !mobIsActive">
+            <use xlink:href="/sprite.svg#whatsapp" />
+          </svg>
+        </div>
+        <div class="menu-mobile__messenger">
+          <div class="menu-mobile__messenger-label">Написать в Telegram</div>
+          <svg height="40" width="40" @click="mobIsActive = !mobIsActive">
+            <use xlink:href="/sprite.svg#telegram" />
+          </svg>
+        </div>
+      </div>
+      <div class="menu-mobile__phone-container">
+        <div>Бесплатная консультация</div>
+        <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+      </div>
     </div>
-    <svg height="28" width="28" @click="mobIsActive = !mobIsActive">
-      <use xlink:href="/sprite.svg#whatsapp" />
-    </svg>
   </div>
 </template>
