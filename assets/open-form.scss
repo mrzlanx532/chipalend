@@ -49,7 +49,17 @@
     background: #FFF;
     color: #1D1C21;
     border-radius: 20px;
-    box-shadow: 0 10px 40px 0 rgba(77, 77, 77, 0.2), 0 0 0 3px transparent;
+    box-shadow: none;
+    outline: none;
+    transition: box-shadow 0.3s;
+
+    &::placeholder {
+      color: #cfcfcf;
+    }
+
+    &:focus {
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
   }
 
   &__form-container {

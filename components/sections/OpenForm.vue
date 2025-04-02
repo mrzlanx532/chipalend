@@ -7,7 +7,7 @@
     <div class="container" v-gsap.whenVisible.once.from='{ autoAlpha: 0, delay: 0.2, y: 10 }'>
       <h2 class="open-form__header">Остались вопросы?</h2>
       <div class="open-form__subheader">
-        Введите Ваш номер телефона и мы свяжемся с вами <br>
+        Укажите номер телефона и мы свяжемся с вами <br>
         для обсуждения всех деталей по организации праздника
       </div>
       <div class="open-form__form-container">
