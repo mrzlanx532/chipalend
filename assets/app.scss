@@ -116,16 +116,22 @@ button {
   &.--not-white {
     background: linear-gradient(180deg, #fde868 13%, rgba(255, 205, 68, 0) 100%), #f8ba59;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    &:hover {
-      background: linear-gradient(180deg, #FFE547 13%, rgba(255, 205, 68, 0) 100%), #FFB541;
-      box-shadow: none;
+    
+    @media (hover: hover) {
+      &:hover {
+        background: linear-gradient(180deg, #FFE547 13%, rgba(255, 205, 68, 0) 100%), #FFB541;
+        box-shadow: none;
+      }
     }
   }
 
   &.--white {
     background: linear-gradient(180deg, #ffed7d 13%, rgba(255, 205, 68, 0) 100%), #f1c580;
-    &:hover {
-      background: linear-gradient(180deg, #f8e571 13%, rgba(255, 205, 68, 0) 100%), #ecbd72;
+
+    @media (hover: hover) {
+      &:hover {
+        background: linear-gradient(180deg, #f8e571 13%, rgba(255, 205, 68, 0) 100%), #ecbd72;
+      }
     }
   }
 }
