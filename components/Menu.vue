@@ -39,12 +39,12 @@ const lockScroll = (e) => {
 
 const openMenu = () => {
   mobIsActive.value = true
-  document.body.addEventListener('wheel', lockScroll, { passive: false })
+  document.body.style.touchAction = 'none'
 }
 
 const closeMenu = () => {
   mobIsActive.value = false
-  document.body.removeEventListener('wheel', lockScroll, { passive: false })
+  document.body.style.touchAction = 'auto'
 }
 
 onClickOutside(menuMobileTemplate, () => mobIsActive.value = false)
