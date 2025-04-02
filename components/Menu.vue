@@ -33,10 +33,6 @@ const items = [
   },
 ]
 
-const lockScroll = (e) => {
-  e.preventDefault()
-}
-
 const openMenu = () => {
   mobIsActive.value = true
   document.body.style.touchAction = 'none'
@@ -59,7 +55,7 @@ const onClickTelegram = () => {
   a.click()
 }
 
-onClickOutside(menuMobileTemplate, () => mobIsActive.value = false)
+onClickOutside(menuMobileTemplate, closeMenu)
 
 onMounted(() => {
 
