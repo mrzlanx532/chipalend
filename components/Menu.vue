@@ -118,13 +118,13 @@ onMounted(() => {
       <div class="menu-mobile__phone-container">
         <div class="menu-mobile__messengers">
           <div class="menu-mobile__messenger" @click="onClickWhatsapp">
-            <div class="menu-mobile__messenger-label">Написать в Whatsapp</div>
+            <div class="menu-mobile__messenger-label"><a>Написать в Whatsapp</a></div>
             <svg height="40" width="40" @click="mobIsActive = !mobIsActive">
               <use xlink:href="/sprite.svg#whatsapp" />
             </svg>
           </div>
           <div class="menu-mobile__messenger">
-            <div class="menu-mobile__messenger-label">Написать в Telegram</div>
+            <div class="menu-mobile__messenger-label"><a>Написать в Telegram</a></div>
             <svg height="40" width="40" @click="mobIsActive = !mobIsActive">
               <use xlink:href="/sprite.svg#telegram" />
             </svg>

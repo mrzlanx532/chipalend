@@ -16,8 +16,10 @@
 a {
   color: #056EDA;
 
-  &:hover {
-    color: #1D1C21;
+  @media (hover: hover) {
+    &:hover {
+      color: #1D1C21;
+    }
   }
 }
 

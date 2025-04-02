@@ -180,6 +180,10 @@
   overflow: hidden;
   font-family: 'Geologica';
 
+  a:active {
+    color: #939393;
+  }
+
   &>:nth-child(2) {
     flex-grow: 1;
     display: flex;
