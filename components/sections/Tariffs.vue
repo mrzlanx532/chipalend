@@ -57,15 +57,21 @@ const tariffs = ref([
 
 const tariffTemplateRef = useTemplateRef<HTMLDivElement>('tariffTemplateRef')
 
+let mm = useGSAP().matchMedia()
+
 const onPointerOver = (e: PointerEvent, index: number) => {
-  useGSAP().to(tariffTemplateRef.value[index], {
-    scale: 1.05
+  mm.add('(min-width: 1200px)', () => {
+    useGSAP().to(tariffTemplateRef.value[index], {
+      scale: 1.05
+    })
   })
 }
 
 const onPointerOut = (e: PointerEvent, index: number) => {
-  useGSAP().to(tariffTemplateRef.value[index], {
-    scale: 1
+  mm.add('(min-width: 1200px)', () => {
+    useGSAP().to(tariffTemplateRef.value[index], {
+      scale: 1
+    })
   })
 }
 </script>
@@ -80,7 +86,7 @@ const onPointerOut = (e: PointerEvent, index: number) => {
           class="tariffs__tariff"
           v-for="(tariff, index) in tariffs"
           ref="tariffTemplateRef"
-          v-gsap.desktop.whenVisible.once.from='{ autoAlpha: 0, start: "top 80%", end: "bottom 10%"}'
+          v-gsap.whenVisible.once.from='{ autoAlpha: 0, start: "top 80%", end: "bottom 10%"}'
       >
         <div class="tariffs__tariff-name">
           {{ tariff.name }}
