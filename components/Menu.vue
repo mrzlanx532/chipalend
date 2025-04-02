@@ -33,6 +33,20 @@ const items = [
   },
 ]
 
+const lockScroll = (e) => {
+  e.preventDefault()
+}
+
+const openMenu = () => {
+  mobIsActive.value = true
+  document.body.addEventListener('wheel', lockScroll, { passive: false })
+}
+
+const closeMenu = () => {
+  mobIsActive.value = false
+  document.body.removeEventListener('wheel', lockScroll, { passive: false })
+}
+
 onClickOutside(menuMobileTemplate, () => mobIsActive.value = false)
 
 onMounted(() => {
@@ -76,18 +90,28 @@ onMounted(() => {
         <a :href="item.link" ref="menuItemsTemplate">{{ item.label }}</a>
       </li>
     </ul>
-    <div class="burger-container" @click="mobIsActive = !mobIsActive">
+    <div class="burger-container" @click="openMenu">
       <svg height="50" width="50">
         <use xlink:href="/sprite.svg#burger" />
       </svg>
     </div>
   </div>
   <div class="menu-mobile" :class="{'active': mobIsActive}" ref="menuMobileTemplate">
-    <div class="flex flex-center">
-      <button class="menu-mobile__close-button" @click="mobIsActive = false">Закрыть</button>
+    <div class="menu-mobile__header-container">
+      <div class="menu-mobile__company-name" ref="menuCompanyNameTemplate">TOP1ANIMATOR</div>
+      <svg height="28" width="28" @click="closeMenu">
+        <use xlink:href="/sprite.svg#close" />
+      </svg>
     </div>
     <ul class="menu-mobile__items">
       <li v-for="item in items" ><a :href="item.link">{{ item.label }}</a></li>
     </ul>
+    <hr />
+    <div style="margin-top: 20px;">
+      <a href="tel:+79999999999">+7(999)999-99-99</a>
+    </div>
+    <svg height="28" width="28" @click="mobIsActive = !mobIsActive">
+      <use xlink:href="/sprite.svg#whatsapp" />
+    </svg>
   </div>
 </template>

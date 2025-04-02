@@ -171,17 +171,35 @@
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   -webkit-transform: translate3d(320px, 0, 0);
   transform: translate3d(320px, 0, 0);
-  padding: 15px 15px 20px 15px;
+  padding: 30px;
   overflow: auto;
   background: linear-gradient(to bottom, #1D1C21 20%, rgba(29, 28, 33, 0.95));
   color: #FFF;
   -webkit-backface-visibility: hidden;
+
+  hr {
+    border-color: #eeeeee;
+  }
+
+  &__company-name {
+    vertical-align: middle;
+    font-size: 24px;
+    color: white;
+    font-family: "Shantell Sans";
+  }
+
+  &__header-container {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__close-button {
     padding: 10px;
   }
 
   &__items {
+    font-family: 'Geologica';
+
     li {
       padding: 10px 0 10px 0;
 
