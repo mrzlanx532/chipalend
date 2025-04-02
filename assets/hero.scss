@@ -172,10 +172,10 @@
   -webkit-transform: translate3d(320px, 0, 0);
   transform: translate3d(320px, 0, 0);
   padding: 30px;
-  overflow: auto;
   background: linear-gradient(to bottom, #1D1C21 20%, rgba(29, 28, 33, 0.95));
   color: #FFF;
   -webkit-backface-visibility: hidden;
+  overflow: hidden;
 
   hr {
     border-color: #eeeeee;
