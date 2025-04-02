@@ -47,6 +47,12 @@ const closeMenu = () => {
   document.body.style.touchAction = 'auto'
 }
 
+const onClickWhatsapp = () => {
+  const a = document.createElement('a')
+  a.href = 'whatsapp://send?abid=+79031559009'
+  a.click()
+}
+
 onClickOutside(menuMobileTemplate, () => mobIsActive.value = false)
 
 onMounted(() => {
@@ -111,7 +117,7 @@ onMounted(() => {
     <div>
       <div class="menu-mobile__phone-container">
         <div class="menu-mobile__messengers">
-          <div class="menu-mobile__messenger">
+          <div class="menu-mobile__messenger" @click="onClickWhatsapp">
             <div class="menu-mobile__messenger-label">Написать в Whatsapp</div>
             <svg height="40" width="40" @click="mobIsActive = !mobIsActive">
               <use xlink:href="/sprite.svg#whatsapp" />
