@@ -53,6 +53,12 @@ const onClickWhatsapp = () => {
   a.click()
 }
 
+const onClickTelegram = () => {
+  const a = document.createElement('a')
+  a.href = 'https://t.me/mrzlanx532'
+  a.click()
+}
+
 onClickOutside(menuMobileTemplate, () => mobIsActive.value = false)
 
 onMounted(() => {
@@ -122,7 +128,7 @@ onMounted(() => {
               <a class="menu-mobile__whatsapp-link">Написать в <span style="color: #40c351;">Whatsapp</span></a>
             </div>
           </div>
-          <div class="menu-mobile__messenger">
+          <div class="menu-mobile__messenger" @click="onClickTelegram">
             <div class="menu-mobile__messenger-label">
               <a class="menu-mobile__telegram-link">&nbsp;Написать в <span style="color: #29b6f6;">Telegram</span>&nbsp;</a>
             </div>
