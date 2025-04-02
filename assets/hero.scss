@@ -210,11 +210,32 @@
     margin-bottom: 40px;
   }
 
+  &__whatsapp-link {
+    border: 1px solid #40c351;
+    border-radius: 15px;
+    padding: 15px 15px;
+    display: inline-block;
+  }
+
+  &__telegram-link {
+    margin-top: 10px;
+    border: 1px solid #29b6f6;
+    border-radius: 15px;
+    padding: 15px 15px;
+    display: inline-block;
+  }
+
   &__messenger {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     align-items: center;
+
+    &:focus-within {
+      a {
+        color: #939393;
+      }
+    }
 
     svg {
       pointer-events: none;
