@@ -1,0 +1,143 @@
+.reviews {
+  overflow: hidden;
+
+  &__review-header {
+    color: #5a2e2e;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 54px;
+    color: #5a2e2e;
+    text-align: center;
+    margin-bottom: 50px;
+
+    @media (min-width: 360px) {
+      font-size: 24px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 54px;
+    }
+  }
+
+  .review__reviews-desktop {
+    grid-gap: 20px;
+    position: relative;
+    height: 800px;
+    top: 50px;
+
+    @media (min-width: 360px) {
+      display: none;
+    }
+
+    @media (min-width: 1200px) {
+      display: block;
+    }
+
+    img {
+      border-radius: 20px;
+      width: 300px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      position: absolute;
+      right: 0;
+
+      &:nth-child(1) {
+        left: calc(50% - 900px);
+        top: 50px;
+        transform: scale(0.8);
+      }
+
+      &:nth-child(2) {
+        left: calc(50% - 600px);
+        top: -95px;
+        transform: scale(0.6);
+        z-index: 1;
+      }
+
+      &:nth-child(3) {
+        left: calc(50% - 600px);
+        top: 170px;
+        transform: scale(0.5);
+      }
+
+      &:nth-child(4) {
+        z-index: 2;
+        left: calc(50% - 350px);
+        top: -20px;
+        transform: scale(0.8);
+      }
+
+      &:nth-child(5) {
+        left: calc(50% - 320px);
+        top: 200px;
+        transform: scale(0.7);
+        z-index: 1;
+      }
+
+      &:nth-child(6) {
+        left: calc(50% - 240px);
+        top: -80px;
+        transform: scale(0.8);
+      }
+
+      &:nth-child(7) {
+        left: calc(50% - 50px);
+        top: 200px;
+        transform: scale(0.8);
+        z-index: 1;
+      }
+
+      &:nth-child(8) {
+        left: calc(50% + 100px);
+        top: -100px;
+        transform: scale(0.7);
+      }
+
+      &:nth-child(9) {
+        left: calc(50% + 200px);
+        top: 105px;
+        transform: scale(0.8);
+        z-index: 1;
+      }
+
+      &:nth-child(10) {
+        left: calc(50% + 350px);
+        top: -30px;
+        transform: scale(0.8);
+      }
+
+      &:nth-child(11) {
+        left: calc(50% + 450px);
+        top: 170px;
+        transform: scale(0.6);
+      }
+
+      &:nth-child(12) {
+        left: calc(50% + 450px);
+        top: 30px;
+        transform: scale(0.6);
+      }
+    }
+  }
+
+  .review__reviews-mobile {
+    margin-bottom: 50px;
+
+    @media (min-width: 360px) {
+      display: block;
+    }
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
+
+    img {
+      border-radius: 20px;
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
