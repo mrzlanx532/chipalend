@@ -10,6 +10,7 @@ import Reviews from '~/components/sections/Reviews.vue'
   <div id="page">
     <Hero />
     <Tariffs />
+    <Characters />
     <Reviews />
     <OpenForm />
   </div>

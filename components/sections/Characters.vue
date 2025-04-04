@@ -16,7 +16,9 @@ const images = ref([
   <div class="characters">
     <div class="characters__container container">
       <h2 class="characters__header">Наши персонажи</h2>
-      <img v-for="image in images" :src="'/img/costumes/' + image" width="200" height="200" />
+      <div class="characters__images">
+        <img v-for="image in images" :src="'/img/costumes/' + image" width="200" height="200" />
+      </div>
     </div>
   </div>
 </template>

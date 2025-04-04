@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import { MaskInput } from 'vue-3-mask';
+
+const formData = ref({
+  name: null,
+  phone: null
+})
 
 </script>
 
@@ -11,8 +17,8 @@
         для обсуждения всех деталей по организации праздника
       </div>
       <div class="open-form__form-container">
-        <input class="open-form__input" placeholder="Имя">
-        <input class="open-form__input" placeholder="Номер">
+        <input class="open-form__input" v-model="formData.name" placeholder="Имя">
+        <MaskInput class="open-form__input" v-model="formData.phone" placeholder="Номер" mask="+7 (###) ###-##-##"/>
         <button class="button --not-white">Получить консультацию</button>
       </div>
     </div>

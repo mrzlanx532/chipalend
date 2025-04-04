@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
       '~/assets/app.scss',
-      'vue3-carousel/carousel.css'
+      '@splidejs/vue-splide/css',
   ],
   modules: [
     'v-gsap-nuxt',

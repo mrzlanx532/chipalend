@@ -1,17 +1,5 @@
 <script setup lang="ts">
-import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel'
-
-const images = Array.from({ length: 12 }, (_, index) => ({
-  id: index + 1,
-  url: `/img/reviews/review-${index + 1}.png`,
-}))
-
-const config = {
-  transition: 700,
-  slideEffect: 'slide',
-  itemsToShow: 1,
-  wrapAround: true,
-}
+import { Splide, SplideSlide } from '@splidejs/vue-splide'
 </script>
 
 <template>
@@ -34,17 +22,12 @@ const config = {
       <img v-gsap.desktop.whenVisible.to="{ x: 20, y: -50, start: 'top bottom', end: 'bottom top', scrub: 1.5 }" src="/img/reviews/review-12.png">
     </div>
 
-    <div class="container review__reviews-mobile">
-      <Carousel v-bind="config">
-        <Slide v-for="image in images" :key="image.id">
-          <img :src="image.url" alt="image" />
-        </Slide>
-
-        <template #addons>
-          <Navigation />
-          <Pagination />
-        </template>
-      </Carousel>
+    <div class="review__reviews-mobile">
+      <Splide :options="{ rewind: true, padding: '5rem', type: 'loop', gap: '1rem' }" aria-label="Vue Splide Example">
+        <SplideSlide v-for="index in 12" :key="index">
+          <img :src="'/img/reviews/review-' + (index) + '.png'" :alt="'review-' + index">
+        </SplideSlide>
+      </Splide>
     </div>
   </div>
 </template>
