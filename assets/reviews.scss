@@ -123,7 +123,7 @@
   }
 
   .review__reviews-mobile {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 
     @media (min-width: 360px) {
       display: block;
@@ -143,5 +143,9 @@
 
   .splide__pagination__page.is-active {
     background: black;
+  }
+
+  .splide__pagination {
+    bottom: -2em;
   }
 }
