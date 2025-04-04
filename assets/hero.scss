@@ -119,6 +119,11 @@
   padding: 0 30px;
 
   &__company-name {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 24px;
+    color: black;
+    font-family: 'Shantell Sans';
 
     @media (min-width: 360px) {
       opacity: 0;
@@ -127,12 +132,6 @@
     @media (min-width: 1200px) {
       opacity: 1;
     }
-
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 24px;
-    color: black;
-    font-family: 'Shantell Sans';
   }
 
   &__items {
