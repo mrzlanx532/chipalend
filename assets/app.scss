@@ -71,18 +71,6 @@ a {
   }
 }
 
-button {
-  padding: 20px;
-  color: black;
-  font-weight: bold;
-  background: white;
-  outline: none;
-  border: 0;
-  border-radius: 20px;
-  text-align: center;
-  cursor: pointer;
-}
-
 .flex {
   display: flex;
 }
@@ -94,57 +82,4 @@ button {
 
 .flex-end {
   align-items: flex-end;
-}
-
-.button {
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: top;
-  position: relative;
-  padding: 17px 25px 15px 25px;
-  height: 60px;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.35;
-  text-decoration: none;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 2px solid #FFCB44;
-  color: #1D1C21;
-  border-radius: 30px;
-  -webkit-tap-highlight-color: transparent;
-
-  &.--not-white {
-    background: linear-gradient(180deg, #fde868 13%, rgba(255, 205, 68, 0) 100%), #f8ba59;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    
-    @media (hover: hover) {
-      &:hover {
-        background: linear-gradient(180deg, #FFE547 13%, rgba(255, 205, 68, 0) 100%), #FFB541;
-        box-shadow: none;
-      }
-    }
-  }
-
-  &.--white {
-    background: linear-gradient(180deg, #ffed7d 13%, rgba(255, 205, 68, 0) 100%), #f1c580;
-
-    @media (hover: hover) {
-      &:hover {
-        background: linear-gradient(180deg, #f8e571 13%, rgba(255, 205, 68, 0) 100%), #ecbd72;
-      }
-    }
-  }
 }

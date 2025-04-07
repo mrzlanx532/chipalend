@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onClickOutside } from '@vueuse/core'
+import useSocialLinks from '~/composables/useSocialLinks'
 
 const mobIsActive = ref(false)
 const menuMobileTemplate = useTemplateRef<HTMLDivElement>('menuMobileTemplate')
@@ -9,6 +10,11 @@ const menuItemsTemplate = useTemplateRef<HTMLDivElement>('menuItemsTemplate')
 const menuItems1Template = useTemplateRef<HTMLDivElement>('menuItems1Template')
 
 let isFirstCallbackExecuted = false
+
+const {
+  onClickWhatsapp,
+  onClickTelegram
+} = useSocialLinks()
 
 const items = [
   {
@@ -41,18 +47,6 @@ const openMenu = () => {
 const closeMenu = () => {
   mobIsActive.value = false
   document.body.style.touchAction = 'auto'
-}
-
-const onClickWhatsapp = () => {
-  const a = document.createElement('a')
-  a.href = 'whatsapp://send?phone=79031559009'
-  a.click()
-}
-
-const onClickTelegram = () => {
-  const a = document.createElement('a')
-  a.href = 'https://t.me/mrzlanx532'
-  a.click()
 }
 
 onClickOutside(menuMobileTemplate, closeMenu)

@@ -53,6 +53,14 @@
     outline: none;
     transition: box-shadow 0.3s;
 
+    &.--error {
+      background: #fdebeb;
+    }
+
+    &.--error::placeholder {
+      color: #9f5959;
+    }
+
     &::placeholder {
       color: #cfcfcf;
     }

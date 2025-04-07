@@ -32,4 +32,21 @@
       align-items: space-between;
     }
   }
+
+  &__social-links-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__social-links {
+    svg:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__whatsapp-link {
+    position: absolute;
+    top: -4px;
+  }
 }

@@ -1,21 +1,91 @@
-.input {
-  display: inline-block;
-  font-family: "Nunito", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 20px;
+.button {
   font-weight: bold;
-  line-height: 1.3;
-  -webkit-appearance: none;
-  border: none;
-  padding: 17px 30px;
-  overflow: visible;
-  background: #FFF;
+  background: white;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: top;
+  position: relative;
+  padding: 17px 25px 15px 25px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.35;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid #FFCB44;
   color: #1D1C21;
   border-radius: 30px;
-  box-shadow: 0 10px 40px 0 rgba(77, 77, 77, 0.2), 0 0 0 3px transparent;
-  width: 100%;
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-tap-highlight-color: transparent;
 
-  &:focus-visible {
-    outline: none;
+  &.--not-white {
+    background: linear-gradient(180deg, #fde868 13%, rgba(255, 205, 68, 0) 100%), #f8ba59;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+    @media (hover: hover) {
+      &:hover {
+        background: linear-gradient(180deg, #FFE547 13%, rgba(255, 205, 68, 0) 100%), #FFB541;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.--white {
+    background: linear-gradient(180deg, #ffed7d 13%, rgba(255, 205, 68, 0) 100%), #f1c580;
+
+    @media (hover: hover) {
+      &:hover {
+        background: linear-gradient(180deg, #f8e571 13%, rgba(255, 205, 68, 0) 100%), #ecbd72;
+      }
+    }
+  }
+}
+
+.input {
+
+  span {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  input {
+    margin-top: 10px;
+    display: inline-block;
+    font-family: "Nunito", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.3;
+    -webkit-appearance: none;
+    padding: 17px 30px;
+    overflow: visible;
+    background: #FFF;
+    color: #1D1C21;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px 0 rgba(77, 77, 77, 0.2), 0 0 0 3px transparent;
+    width: 100%;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    outline: 0 none;
+    border: 1px solid transparent;
+
+    &:focus {
+      border: 1px solid #919191;
+      outline: 0 none;
+    }
   }
 }

@@ -24,9 +24,6 @@ const { open, close } = useModal({
     onClosed: closeModal,
     onConfirm: closeModal,
   },
-  slots: {
-    default: '<p>The content of the modal</p>',
-  },
 })
 
 const setHeight = () => {
