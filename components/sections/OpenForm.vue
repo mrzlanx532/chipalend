@@ -16,7 +16,7 @@ const formData = ref({
       </div>
       <div class="open-form__form-container">
         <input class="open-form__input" v-model="formData.name" placeholder="Имя">
-        <input class="open-form__input" v-model="formData.phone" placeholder="Номер"/>
+        <input class="open-form__input" v-maska="'+7 (###) ###-##-##'" v-model="formData.phone" placeholder="Номер"/>
         <button class="button --not-white">Получить консультацию</button>
       </div>
     </div>
