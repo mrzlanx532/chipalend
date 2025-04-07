@@ -8,8 +8,8 @@ const formData = ref({
 
 <template>
   <div class="open-form">
-    <div class="container" v-gsap.whenVisible.once.from='{ autoAlpha: 0, delay: 0.2, y: 10 }'>
-      <h2 class="open-form__header">Остались вопросы?</h2>
+    <div class="container" v-gsap.whenVisible.once.from='{ autoAlpha: 0, start: "top 80%", end: "bottom 10%"}'>
+      <h2 class="open-form__header">Оставить заявку</h2>
       <div class="open-form__subheader">
         Укажите номер телефона и мы свяжемся с вами <br>
         для обсуждения всех деталей по организации праздника

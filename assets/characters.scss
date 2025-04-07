@@ -1,24 +1,39 @@
 .characters {
   height: auto;
-  background: #1D1C21;
-  padding: 90px 0 150px 0;
+  background: -webkit-linear-gradient(180deg, #1d1c21, #5a2e2e);/* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(180deg, #1d1c21, #884e4e);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   overflow: hidden;
+
+  @media (min-width: 360px) {
+    padding: 50px 0 20px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 80px 0 60px 0;
+  }
 
   &__header {
     color: white;
     font-family: 'Geologica';
-    font-size: 54px;
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
+
+    @media (min-width: 360px) {
+      font-size: 24px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 54px;
+    }
   }
 
   &__images {
-    display: flex;
-    grid-gap: 20px;
+    padding: 20px 10px 50px 10px;
 
     img {
+      width: 300px;
       border-radius: 5px;
-      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     }
   }
 }
