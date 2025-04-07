@@ -1,0 +1,37 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    width: 400px;
+
+    & > * + *{
+      margin: 0.5rem 0;
+    }
+
+    & h1 {
+      font-size: 1.375rem;
+      text-align: center;
+      font-family: 'Geologica';
+    }
+
+    & p {
+      text-align: center;
+    }
+
+    & button {
+      margin: 0.25rem 0 0 auto;
+      padding: 0 8px;
+      border: 1px solid;
+      border-radius: 0.5rem;
+    }
+  }
+}

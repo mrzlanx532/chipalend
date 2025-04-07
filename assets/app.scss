@@ -6,6 +6,8 @@
 @use 'gallery';
 @use 'reviews';
 @use 'footer';
+@use 'modal';
+@use 'form';
 
 *, *:before, *:after {
   box-sizing: border-box;

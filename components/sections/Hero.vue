@@ -1,10 +1,33 @@
 <script setup lang="ts">
+import { useModal } from 'vue-final-modal'
 import Menu from '@/components/Menu.vue'
+import LeadModal from '@/components/modals/Lead.vue'
 
 const heroTemplateRef = ref(null)
 const heroCoverTemplateRef = ref(null)
 const heroAnimatorContainerTemplateRef = ref(null)
 const calculatedHeight = ref<number>(0)
+
+const closeModal = () => {
+  document.documentElement.style.overflow = 'auto'
+  close()
+}
+
+const openModal = () => {
+  document.documentElement.style.overflow = 'hidden'
+  open()
+}
+
+const { open, close } = useModal({
+  component: LeadModal,
+  attrs: {
+    onClosed: closeModal,
+    onConfirm: closeModal,
+  },
+  slots: {
+    default: '<p>The content of the modal</p>',
+  },
+})
 
 const setHeight = () => {
   calculatedHeight.value = document.documentElement.clientHeight
@@ -39,7 +62,7 @@ onMounted(() => {
       <h1 class="hero__header" v-gsap.fromInvisible.from='{ delay: 0.1, y: 10 }'>Организация детских праздников от профессиональных аниматоров в Москве</h1>
       <h2 class="hero__subheader" v-gsap.fromInvisible.from='{ delay: 0.1, y: 10 }'></h2>
       <div class="flex flex-center">
-        <button class="button --not-white" v-gsap.fromInvisible.from='{ delay: 1.5, y: 10 }'>Связаться</button>
+        <button @click="openModal" class="button --not-white" v-gsap.fromInvisible.from='{ delay: 1.5, y: 10 }'>Связаться</button>
       </div>
     </div>
   </div>
