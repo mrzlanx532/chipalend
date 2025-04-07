@@ -3,7 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide'
 </script>
 
 <template>
-  <div class="reviews">
+  <div id="reviews" class="reviews">
     <h2 class="reviews__review-header" v-gsap.whenVisible.once.from='{ autoAlpha: 0, start: "top 90%", end: "bottom 10%"}'>
       Наши отзывы
     </h2>

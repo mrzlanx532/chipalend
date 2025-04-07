@@ -13,23 +13,23 @@ let isFirstCallbackExecuted = false
 const items = [
   {
     label: 'Главная',
-    link: '#',
-  },
-  {
-    label: 'Преимущества',
-    link: '#',
+    link: '#hero',
   },
   {
     label: 'Тарифы',
-    link: '#',
+    link: '#tariffs',
+  },
+  {
+    label: 'Галерея',
+    link: '#gallery',
   },
   {
     label: 'Отзывы',
-    link: '#',
+    link: '#reviews',
   },
   {
     label: 'Контакты',
-    link: '#',
+    link: '#contacts',
   },
 ]
 
@@ -115,7 +115,7 @@ onMounted(() => {
           </svg>
         </div>
         <ul class="menu-mobile__items">
-          <li v-for="item in items" ><a :href="item.link">{{ item.label }}</a></li>
+          <li v-for="item in items" ><a :href="item.link" @click="closeMenu">{{ item.label }}</a></li>
         </ul>
       </div>
       <div>

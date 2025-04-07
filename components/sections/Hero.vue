@@ -25,7 +25,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="hero" ref="heroTemplateRef"/>
+  <div id="hero" class="hero" ref="heroTemplateRef"/>
   <div class="hero__cover" ref="heroCoverTemplateRef"/>
   <div class="hero__animator-container" ref="heroAnimatorContainerTemplateRef">
     <img class="hero__animator-pirat" v-gsap.fromInvisible.from='{ delay: 0.2, x: -10 }' src="/img/hero-animator-pirat.png"/>

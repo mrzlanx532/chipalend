@@ -34,11 +34,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="characters">
-    <div class="characters__container">
-      <h2 class="characters__header container" v-gsap.whenVisible.once.from='{ autoAlpha: 0, start: "top 80%", end: "bottom 10%"}'>Фотографии с празников</h2>
+  <div id="gallery" class="gallery">
+    <div class="gallery__container">
+      <h2 class="gallery__header container" v-gsap.whenVisible.once.from='{ autoAlpha: 0, start: "top 80%", end: "bottom 10%"}'>Фотографии с празников</h2>
       <Splide :options="options" aria-label="Vue Splide Example">
-        <SplideSlide class="characters__images" v-for="image in images">
+        <SplideSlide class="gallery__images" v-for="image in images">
           <img class="item"  :src="'/img/costumes/' + image"/>
         </SplideSlide>
       </Splide>

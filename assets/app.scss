@@ -3,7 +3,7 @@
 @use 'hero';
 @use 'tariffs';
 @use 'open-form';
-@use 'characters';
+@use 'gallery';
 @use 'reviews';
 @use 'footer';
 
@@ -31,6 +31,10 @@ p {
 h2 {
   font-family: 'Geologica';
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

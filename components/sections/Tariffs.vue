@@ -55,7 +55,7 @@ const onPointerOut = (e: PointerEvent, index: number) => {
 </script>
 
 <template>
-  <div class="tariffs">
+  <div id="tariffs" class="tariffs">
     <h2 v-gsap.whenVisible.once.from='{ autoAlpha: 0, start: "top 80%", end: "bottom 10%"}'>Тарифы праздника</h2>
     <div class="tariffs__container container">
       <div

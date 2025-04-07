@@ -7,7 +7,7 @@ const formData = ref({
 </script>
 
 <template>
-  <div class="open-form">
+  <div id="contacts" class="open-form">
     <div class="container" v-gsap.whenVisible.once.from='{ autoAlpha: 0, start: "top 80%", end: "bottom 10%"}'>
       <h2 class="open-form__header">Оставить заявку</h2>
       <div class="open-form__subheader">
