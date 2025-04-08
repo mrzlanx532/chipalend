@@ -140,6 +140,7 @@ const onPointerOut = (e: PointerEvent, index: number, isSpecial: boolean) => {
             {{ point }}
           </li>
         </ul>
+        <div class="tariffs__tariff-visit">выезд оплачивается отдельно</div>
         <div class="tariffs__tariff-button-container">
           <button @click="openModal(tariff.name)" class="button --white">Выбрать</button>
         </div>
@@ -170,6 +171,7 @@ const onPointerOut = (e: PointerEvent, index: number, isSpecial: boolean) => {
             {{ point }}
           </li>
         </ul>
+        <div class="tariffs__tariff-visit">выезд оплачивается отдельно</div>
         <div class="tariffs__tariff-button-container">
           <button @click="openModal(tariff.nameHidden)" class="button --white">Выбрать</button>
         </div>
