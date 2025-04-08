@@ -21,6 +21,8 @@ const openModal = () => {
 const { open, close } = useModal({
   component: LeadModal,
   attrs: {
+    title: 'Оставить заявку',
+    subtitle: 'Бесплатная консультация',
     onClosed: closeModal,
     onConfirm: closeModal,
   },

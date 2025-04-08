@@ -7,10 +7,16 @@ export default defineEventHandler(async (event) => {
         console.error('Ошибка в чтении тела')
     })
 
+    let text = `Новая заявка \n\nИмя: ${body.name}\nТелефон: ${body.phone}"`
+
+    if (body.packageName) {
+        text = text + `\nПакет: "${body.packageName}"`
+    }
+
     void sendMail({
         subject: 'Новая заявка',
-        text: `Новая заявка \n\nИмя: ${body.name}\nТелефон: ${body.phone}"`,
-        to: 'denis_danilov_97@mail.ru'
+        to: 'denis_danilov_97@mail.ru',
+        text
     })
 
     return body
