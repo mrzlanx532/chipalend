@@ -75,5 +75,15 @@
     grid-gap: 10px;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    button {
+      @media (min-width: 360px) {
+        width: 100%;
+      }
+
+      @media (min-width: 1200px) {
+        width: auto;
+      }
+    }
   }
 }
