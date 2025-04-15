@@ -16,7 +16,7 @@ const {
           <p>ИП Иванов Сергей Владимирович</p>
           <p>ОГРНИП: 314547609800635 ИНН: 540290013664</p>
         </div>
-        <div>info@top1animator.ru</div>
+        <div>chipalend@gmail.com</div>
         <div>
           <a href="tel:+79999999999">+7(999)999-99-99</a>
           <div class="footer__social-links-container">

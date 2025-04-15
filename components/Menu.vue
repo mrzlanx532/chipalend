@@ -86,9 +86,9 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="menu__company-name --mobile">TOP1ANIMATOR</div>
+    <div class="menu__company-name --mobile">CHIPALEND</div>
     <div class="menu" ref="menuTemplate">
-      <div class="menu__company-name" ref="menuCompanyNameTemplate">TOP1ANIMATOR</div>
+      <div class="menu__company-name" ref="menuCompanyNameTemplate">CHIPALEND</div>
       <ul class="menu__items" ref="menuItems1Template" v-gsap.fromInvisible.from='{ delay: 0.1, y: -10 }'>
         <li v-for="item in items">
           <a :href="item.link" ref="menuItemsTemplate">{{ item.label }}</a>
@@ -103,7 +103,7 @@ onMounted(() => {
     <div class="menu-mobile" :class="{'active': mobIsActive}" ref="menuMobileTemplate">
       <div>
         <div class="menu-mobile__header-container">
-          <div class="menu-mobile__company-name" ref="menuCompanyNameTemplate">TOP1ANIMATOR</div>
+          <div class="menu-mobile__company-name" ref="menuCompanyNameTemplate">CHIPALEND</div>
           <svg height="28" width="28" @click="closeMenu">
             <use xlink:href="/sprite.svg#close" />
           </svg>

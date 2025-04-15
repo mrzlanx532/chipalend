@@ -5,7 +5,7 @@ module.exports = {
    */
   apps: [
     {
-      name: 'T1A_FRONT:PROD',
+      name: 'CL_FRONT:PROD',
       script: './.output/server/index.mjs',
       watch: false,
       ignore_watch: ['./assets'],
