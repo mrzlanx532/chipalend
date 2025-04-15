@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import useSocialLinks from '~/composables/useSocialLinks'
 
+const config = useRuntimeConfig()
+
 const {
   onClickWhatsapp,
-  onClickTelegram
+  onClickTelegram,
+  getFormattedPhone
 } = useSocialLinks()
+
+const phone = ref(config.public.phone)
+const formattedPhone = getFormattedPhone()
 </script>
 
 <template>
@@ -18,7 +24,7 @@ const {
         </div>
         <div>chipalend@gmail.com</div>
         <div>
-          <a href="tel:+79999999999">+7(999)999-99-99</a>
+          <a :href="'tel:+' + phone">{{ formattedPhone }}</a>
           <div class="footer__social-links-container">
             <div class="footer__social-links">
               <svg height="30" width="30">

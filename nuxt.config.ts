@@ -3,6 +3,13 @@ import { process } from 'std-env'
 
 export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
+    runtimeConfig: {
+        public: {
+            whatsappLink: process.env.WHATSAPP_LINK,
+            telegramLink: process.env.TELEGRAM_LINK,
+            phone: process.env.PHONE
+        }
+    },
     app: {
         head: {
             title: 'Организация детских праздников от профессиональных аниматоров в Москве',

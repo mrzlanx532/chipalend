@@ -9,12 +9,15 @@ const menuCompanyNameTemplate = useTemplateRef<HTMLDivElement>('menuCompanyNameT
 const menuItemsTemplate = useTemplateRef<HTMLDivElement>('menuItemsTemplate')
 const menuItems1Template = useTemplateRef<HTMLDivElement>('menuItems1Template')
 
-let isFirstCallbackExecuted = false
-
 const {
   onClickWhatsapp,
-  onClickTelegram
+  onClickTelegram,
+  getFormattedPhone
 } = useSocialLinks()
+
+const config = useRuntimeConfig()
+const phone = ref(config.public.phone)
+const formattedPhone = getFormattedPhone()
 
 const items = [
   {
@@ -50,38 +53,6 @@ const closeMenu = () => {
 }
 
 onClickOutside(menuMobileTemplate, closeMenu)
-
-onMounted(() => {
-
-  const element = document.getElementsByClassName('hero__container')[0]
-
-  const observer = new IntersectionObserver((entries) => {
-    if (!isFirstCallbackExecuted) {
-      //isFirstCallbackExecuted = true
-      //return
-    }
-
-   /* if (entries[0].isIntersecting) {
-      menuItems1Template.value?.classList.add('white')
-      menuCompanyNameTemplate.value.style.color = 'black'
-      menuItemsTemplate.value.forEach(item => {
-        item.style.color = 'black'
-      })
-    } else {
-      menuItems1Template.value?.classList.remove('white')
-      menuCompanyNameTemplate.value.style.color = 'white'
-      menuItemsTemplate.value.forEach(item => {
-        item.style.color = 'white'
-      })
-    }*/
-  })
-
-  observer.observe(element, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1,
-  })
-})
 </script>
 
 <template>
@@ -127,7 +98,7 @@ onMounted(() => {
             </div>
           </div>
           <div>Бесплатная консультация</div>
-          <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+          <a :href="'tel:+' + phone">{{ formattedPhone }}</a>
         </div>
       </div>
     </div>

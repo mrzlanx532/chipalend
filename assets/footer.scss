@@ -13,6 +13,10 @@
     padding: 50px 0;
     color: #b4bec8;
 
+    > div:first-child {
+      opacity: 0;
+    }
+
     &:last-child {
       //padding-top: 0;
     }
