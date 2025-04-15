@@ -7,7 +7,8 @@ export default defineNuxtConfig({
         public: {
             whatsappLink: process.env.WHATSAPP_LINK,
             telegramLink: process.env.TELEGRAM_LINK,
-            phone: process.env.PHONE
+            phone: process.env.PHONE,
+            toEmail: process.env.NUXT_NODEMAILER_AUTH_USER
         }
     },
     app: {
@@ -44,8 +45,8 @@ export default defineNuxtConfig({
         port: process.env.NUXT_NODEMAILER_PORT || 465,
         secure: true,
         auth: {
-            user: process.env.NUXT_NODEMAILER_USER,
-            pass: process.env.NUXT_NODEMAILER_PASS,
+            user: process.env.NUXT_NODEMAILER_AUTH_USER,
+            pass: process.env.NUXT_NODEMAILER_AUTH_PASS,
         },
     },
 })

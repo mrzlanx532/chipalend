@@ -1,6 +1,9 @@
 import { readBody } from 'h3'
 
 export default defineEventHandler(async (event) => {
+
+    const config = useRuntimeConfig()
+
     const { sendMail } = useNodeMailer()
 
     const body = await readBody(event).catch(() => {
@@ -14,8 +17,8 @@ export default defineEventHandler(async (event) => {
     }
 
     void sendMail({
-        subject: 'Новая заявка',
-        to: 'denis_danilov_97@mail.ru',
+        subject: 'Новая заявка с Chipalend.ru',
+        to: config.public.toEmail,
         text
     })
 
