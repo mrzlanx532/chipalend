@@ -4,7 +4,7 @@
   align-items: center;
 
   & > * {
-    font-family: 'Geologica';
+    font-family: 'Geologica', sans-serif;
   }
 
   &__content {
@@ -20,11 +20,11 @@
       margin-top: 20px;
       font-size: 1.375rem;
       text-align: center;
-      font-family: 'Geologica';
+      font-family: 'Geologica', sans-serif;
     }
 
     & p {
-      font-family: "Shantell Sans";
+      font-family: "Shantell Sans", sans-serif;
       font-size: 18px;
       margin-bottom: 20px;
     }

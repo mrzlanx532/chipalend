@@ -55,32 +55,32 @@
     text-align: center;
     color: grey;
     font-size: 12px;
-    font-family: 'Balsamiq Sans';
+    font-family: 'Balsamiq Sans', sans-serif;
   }
 
   &__tariff-name {
     font-size: 32px;
     text-align: center;
-    font-family: 'Balsamiq Sans';
+    font-family: 'Geologica', sans-serif;
   }
 
   &__tariff-price {
     text-align: center;
     color: dimgrey;
     font-size: 32px;
-    font-family: 'Balsamiq Sans';
+    font-family: 'Geologica', sans-serif;
   }
 
   &__tariff-old-price {
     text-align: center;
     text-decoration-line: line-through;
     color: dimgrey;
-    font-family: 'Balsamiq Sans';
+    font-family: 'Geologica', sans-serif;
   }
 
   &__tariff-points {
     padding: 0 1em;
-    font-family: 'Balsamiq Sans';
+    font-family: 'Balsamiq Sans', sans-serif;
 
     li {
       padding-left: 1em;
