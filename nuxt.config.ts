@@ -3,6 +3,9 @@ import { process } from 'std-env'
 
 export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
+    head: {
+      title: 'Организация детских праздников от профессиональных аниматоров в Москве'
+    },
     devtools: {
         enabled: false
     },
