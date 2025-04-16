@@ -84,7 +84,7 @@ onClickOutside(menuMobileTemplate, closeMenu)
         </ul>
       </div>
       <div>
-        <div class="menu-mobile__phone-container">
+        <div class="menu-mobile__phone-container" v-if="phone">
           <div class="menu-mobile__messengers">
             <div class="menu-mobile__messenger" @click="onClickWhatsapp">
               <div class="menu-mobile__messenger-label">

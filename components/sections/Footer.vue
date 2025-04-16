@@ -17,14 +17,9 @@ const formattedPhone = getFormattedPhone()
   <div class="footer">
     <div class="container">
         <div class="footer__info">
-        <div>
-          <p>Москва, ул. Александры Монаховой, д. 92, к.1</p>
-          <p>ИП Иванов Сергей Владимирович</p>
-          <p>ОГРНИП: 314547609800635 ИНН: 540290013664</p>
-        </div>
         <div>chipalend@gmail.com</div>
-        <div>
-          <a :href="'tel:+' + phone">{{ formattedPhone }}</a>
+<!--        <div>
+          <a v-if="phone" :href="'tel:+' + phone">{{ formattedPhone }}</a>
           <div class="footer__social-links-container">
             <div class="footer__social-links">
               <svg height="30" width="30">
@@ -35,7 +30,7 @@ const formattedPhone = getFormattedPhone()
               </svg>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
