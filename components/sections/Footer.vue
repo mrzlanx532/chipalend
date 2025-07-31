@@ -18,6 +18,7 @@ const formattedPhone = getFormattedPhone()
     <div class="container">
         <div class="footer__info">
         <div>chipalend@gmail.com</div>
+        <div>8 (900) 149-83-03</div>
 <!--        <div>
           <a v-if="phone" :href="'tel:+' + phone">{{ formattedPhone }}</a>
           <div class="footer__social-links-container">
